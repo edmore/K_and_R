@@ -5,7 +5,7 @@
 int main(int argc, char *argv[]){
   int value;
 
-  value = (getchar() != EOF);
-  printf("Value is %d\n", value);
+  printf("Type any key, on Mac [Ctrl-D] is EOF\n");
+  printf("Value is %d\n", getchar() != EOF);
   return 0;
 }
