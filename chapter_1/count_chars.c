@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-main(){
+main()
+{
   double nc = 0;
 
   for (nc = 0; getchar() != EOF ; ++nc)

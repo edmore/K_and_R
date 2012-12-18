@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
   int value;
 
   printf("Type any key, on Mac [Ctrl-D] is EOF\n");
