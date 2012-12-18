@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
   int c;
 
   printf("The value of EOF is %d\n", EOF);

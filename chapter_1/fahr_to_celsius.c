@@ -5,7 +5,8 @@
 #define LOWER 0
 #define MAX 300
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
   float celsius;
   int fahr;
 
