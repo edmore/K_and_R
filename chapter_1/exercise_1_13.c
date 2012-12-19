@@ -19,7 +19,7 @@ main(){
   while ((c = getchar()) != '\n'){
     // ignore the blank spaces
     if (c != ' '){
-      //populate each index with the character count
+      // populate each index with the character count
       histogram[nw] = ++nc;
     }else{
       nc = 0;
