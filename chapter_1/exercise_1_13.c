@@ -1,4 +1,4 @@
-/* Count chars */
+/* Print histogram of words in sentence */
 
 #include <stdio.h>
 #define MAX 10
