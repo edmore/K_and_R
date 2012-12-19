@@ -30,11 +30,10 @@ main(){
   printf("\n");
   printf("Histogram of words:\n");
 
-    for (i = 0; i <= nw; ++i){
-      printf("%2.0d|", histogram[i]);
-      for(k = 0; k < histogram[i]; ++k)
-        printf("=");
-      printf("\n");
-    }
-
+  for (i = 0; i <= nw; ++i){
+    printf("%2.0d|", histogram[i]);
+    for(k = 0; k < histogram[i]; ++k)
+      printf("=");
+    printf("\n");
+  }
 }
