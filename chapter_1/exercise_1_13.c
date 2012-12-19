@@ -1,20 +1,34 @@
 /* Count chars */
 
 #include <stdio.h>
+#define MAX 10
 
 main(){
+  int c;
   int nc = 0;
-  int c, i;
+  int nw = 0;
+  int i,k;
+  int histogram[MAX];
 
-  while ((c = getchar()) != EOF){
-    if (c != '\n'){
-      ++nc;
+  printf("Please input a sentence ( maximum %d words ) and press enter when you are done:\n", MAX);
+  // exit the loop if the user enters a newline character
+  while ((c = getchar()) != '\n'){
+    // ignore the blank spaces
+    if (c != ' '){
+      //populate each index with the character count
+      histogram[nw] = ++nc;
+    }else{
+      nc = 0;
+      ++nw;
     }
   }
 
-  printf("%d|", nc);
-  for (i = 0; i < nc; ++i)
-    printf("=");
-
   printf("\n");
+  printf("Histogram of words:\n");
+  for (i = 0; i <= nw; ++i){
+    printf("%2.0d|", histogram[i]);
+    for(k = 0; k < histogram[i]; ++k)
+      printf("=");
+    printf("\n");
+  }
 }
