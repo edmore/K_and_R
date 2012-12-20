@@ -3,7 +3,7 @@
 #include <stdio.h>
 #define MAX 10
 
-main()
+int main()
 {
   int c;
   int nc = 0;
@@ -39,4 +39,6 @@ main()
       printf("=");
     printf("\n");
   }
+
+  return 0;
 }
