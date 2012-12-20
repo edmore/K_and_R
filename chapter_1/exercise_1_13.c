@@ -17,7 +17,7 @@ main()
 
   printf("Please input a sentence ( maximum %d words ) and press enter when you are done:\n", MAX);
   // exit the loop if the user enters a newline character
-  while ((c = getchar()) != '\n' && nw != MAX){
+  while ((c = getchar()) != '\n'){
     // ignore the blank spaces
     if (c != ' '){
       // populate each index with the character count
