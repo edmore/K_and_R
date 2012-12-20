@@ -3,14 +3,15 @@
 #include <stdio.h>
 #define MAX 10
 
-main(){
+main()
+{
   int c;
   int nc = 0;
   int nw = 0;
   int i,j,k;
   int histogram[MAX];
 
-  // initialize array to array of zeros
+  // initialize array with zeros
   for (j = 0; j < MAX; j++)
     histogram[j] = 0;
 
@@ -21,7 +22,7 @@ main(){
     if (c != ' '){
       // populate each index with the character count
       histogram[nw] = ++nc;
-    }else{
+    } else {
       nc = 0;
       ++nw;
     }
@@ -32,7 +33,7 @@ main(){
 
   for (i = 0; i <= nw; ++i){
     printf("%2.0d|", histogram[i]);
-    for(k = 0; k < histogram[i]; ++k)
+    for (k = 0; k < histogram[i]; ++k)
       printf("=");
     printf("\n");
   }
