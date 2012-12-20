@@ -19,7 +19,7 @@ main()
   // exit the loop if the user enters a newline character
   while ((c = getchar()) != '\n'){
     // ignore the blank spaces
-    if (c != ' '){
+    if (c != ' ' || c != '\t'){
       // populate each index with the character count
       histogram[nw] = ++nc;
     } else {
