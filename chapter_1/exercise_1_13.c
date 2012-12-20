@@ -18,18 +18,17 @@ int main()
   printf("Please input a sentence ( maximum %d words ) and press enter when you are done:\n", MAX);
   // exit the loop if the user enters a newline character
   while ((c = getchar()) != '\n'){
-    // ignore the blank spaces
+    // ignore the blank spaces or tabs
     if (c != ' ' && c != '\t'){
       // populate each index with the character count
       histogram[nw] = ++nc;
     } else {
       nc = 0;
+      if (nw == (MAX-1))
+	break;
       nw++;
     }
   }
-
-  if (nw >= MAX)
-    nw = MAX-1;
 
   printf("\n");
   printf("Histogram of words:\n");
