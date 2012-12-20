@@ -1,1 +1,5 @@
-Some C as I read K&R
+Some C as I read K&R ..
+
+To run the code:
+gcc -o program_name.out program_name.c
+./program_name.out
