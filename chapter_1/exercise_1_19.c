@@ -3,16 +3,21 @@
 #include <stdio.h>
 #define MAXLINE 100
 
-void reverseline(char line[], int length);
+void reverse(char line[], int length);
 int gline(char line[], int maxline);
 
 int main()
 {
-  int c, i, len;
+  int c, i, len, max;
   char line[MAXLINE];
 
-  len = gline(line, MAXLINE);
-  reverseline(line, len);
+  max = 0;
+  while ((len = gline(line, MAXLINE)) > 0) {
+    if (len > max) {
+      reverse(line, len);
+    }
+  }
+
   return 0;
 }
 
@@ -32,11 +37,12 @@ int gline(char s[], int lim) {
   return i;
 }
 
-void reverseline(char s[], int len){
+void reverse(char s[], int len){
   int i = len;
 
   while(i >= 0){
     printf("%c", s[i]);
     --i;
   }
+  printf("\n");
 }
