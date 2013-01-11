@@ -1,7 +1,8 @@
 CC = gcc
+CCFLAGS = -Wall
 
 %.o : %.c
-	$(CC) $< -o $@
+	$(CC) $(CCFLAGS) $< -o $@
 
 clean:
 	rm -f *.o *.out *~
