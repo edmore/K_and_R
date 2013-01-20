@@ -11,7 +11,6 @@ int main()
   return 0;
 }
 
-
 int atoi(char s[])
 {
   int i,n;
