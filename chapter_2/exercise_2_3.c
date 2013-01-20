@@ -20,9 +20,13 @@ int main()
 
   while ( (c=getchar()) != EOF && c != '\n' ){
     c = tolower(c);
-    s[i] = c;
-    ++j;
-    ++i;
+    if (c == '0' || c == 'x'){
+      ;
+    }else{
+      s[i] = c;
+      ++j;
+      ++i;
+    }
   }
 
   count = j;
