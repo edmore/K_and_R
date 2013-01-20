@@ -2,11 +2,14 @@
 
 #include <stdio.h>
 
-main()
+int main()
 {
-  double nc = 0;
+  char c;
+  int nc = 0;
 
-  for (nc = 0; getchar() != EOF ; ++nc)
+  for (nc = 0; (c = getchar()) != EOF && c != '\n' ; ++nc)
     ;
-  printf("%.0f\n", nc);
+
+  printf("%i\n", nc);
+  return 0;
 }
