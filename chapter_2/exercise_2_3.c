@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <strings.h>
+#include <math.h>
+
+#define MAXLINE 10
 
 int count;
 int htoi(char s[]);
@@ -10,14 +13,19 @@ int htoi(char s[]);
 int main()
 {
   int i = 0;
+  int j = 0;
   int value;
   char c;
-  char s[10];
+  char s[MAXLINE];
 
-  for (i = 0; (c=getchar()) != EOF && c != '\n'; ++i)
+  while ( (c=getchar()) != EOF && c != '\n' ){
+    c = tolower(c);
     s[i] = c;
+    ++j;
+    ++i;
+  }
 
-  count = i;
+  count = j;
   value = htoi(s);
   printf("%i\n", value);
   return 0;
@@ -25,30 +33,31 @@ int main()
 
 int htoi(char s[])
 {
-  int i, n;
-  n=0;
+  int i, n, base;
+  base = count - 1;
+  n = 0;
 
-  printf("%i\n", count);
-
-  for (i = 0; isdigit(s[i]) || (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F') ; ++i){
-    if (isdigit(s[i])){
-      n = (s[i] - '0');
-    }else{
-      s[i] = tolower(s[i]);
-      switch ( s[i] ){
-      case 'a': n = 10;
-        break;
-      case 'b': n = 11;
-        break;
-      case 'c': n = 12;
-        break;
-      case 'd': n = 13;
-        break;
-      case 'e': n = 14;
-        break;
-      case 'f': n = 15;
-        break;
+  for (i = 0; i < count; ++i){
+    if ( isdigit(s[i]) || (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F') ){
+      if (isdigit(s[i])){
+        n = n + ( pow(16,base) * (s[i] - '0') );
+      }else{
+        switch ( s[i] ){
+        case 'a': n = n + ( pow(16,base) * 10 );
+          break;
+        case 'b': n = n + ( pow(16,base) * 11 );
+          break;
+        case 'c': n = n + ( pow(16,base) * 12 );
+          break;
+        case 'd': n = n + ( pow(16,base) * 13 );
+          break;
+        case 'e': n = n + ( pow(16,base) * 14 );
+          break;
+        case 'f': n = n + ( pow(16,base) * 15 );
+          break;
+        }
       }
+      --base;
     }
   }
   return n;
