@@ -31,7 +31,6 @@ int main()
 
   count = j;
   value = htoi(s);
-  printf("%i\n", value);
   return 0;
 }
 
