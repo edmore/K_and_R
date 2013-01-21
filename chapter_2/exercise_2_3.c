@@ -19,7 +19,7 @@ int main()
 
   while ( (c=getchar()) != EOF && c != '\n' ){
     c = tolower(c);
-    if (c == '0' || c == 'x'){
+    if ( c == '0' || (c >= 'g' && c<= 'z') ){
       ;
     }else{
       s[i] = c;
@@ -41,7 +41,7 @@ int htoi(char s[])
   n = 0;
 
   for (i = 0; i < count; ++i){
-    if ( isdigit(s[i]) || (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F') ){
+    if ( isdigit(s[i]) || (s[i] >= 'a' && s[i] <= 'f') ){
       if (isdigit(s[i])){
         n = n + ( pow(16,base) * (s[i] - '0') );
       }else{
