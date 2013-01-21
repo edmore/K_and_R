@@ -19,7 +19,7 @@ int main()
 
   while ( (c=getchar()) != EOF && c != '\n' ){
     c = tolower(c);
-    if ( c == '0' || (c >= 'g' && c<= 'z') ){
+    if ( c == '0' || (c >= 'g' && c <= 'z') ){
       ;
     }else{
       s[i] = c;
