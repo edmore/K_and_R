@@ -2,7 +2,6 @@
 
 #include <stdio.h>
 #include <ctype.h>
-#include <strings.h>
 #include <math.h>
 
 #define MAXLINE 10
@@ -31,6 +30,7 @@ int main()
 
   count = j;
   value = htoi(s);
+  printf("The hex string as an integer is %i.\n", value);
   return 0;
 }
 
