@@ -2,35 +2,35 @@
 
 #include <stdio.h>
 
-void squeeze(char s[], char t[]);
+void squeeze(char s1[], char s2[]);
 
 int main()
 {
-  char s[] = "hello";
-  char t[] = "ello";
-  squeeze(s, t);
-  printf("%s\n", s);
+  char s1[] = "hello";
+  char s2[] = "ello";
+  squeeze(s1, s2);
+  printf("%s\n", s1);
   return 0;
 }
 
 
-void squeeze(char s[], char t[])
+void squeeze(char s1[], char s2[])
 {
 
   int i, j;
   int  k; //maintains the index
 
-  for (i=0; t[i] != '\0'; ++i)
+  for (i=0; s2[i] != '\0'; ++i)
     {
-      for (j=k=0; s[j] != '\0'; ++j)
+      for (j=k=0; s1[j] != '\0'; ++j)
         {
-          if (s[j] != t[i])
+          if (s1[j] != s2[i])
             {
-              s[k++] = s[j];
+              s1[k++] = s1[j];
             }
         }
     }
 
-  s[k] = '\0';
+  s1[k] = '\0';
 }
 
