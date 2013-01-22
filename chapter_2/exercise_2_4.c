@@ -8,17 +8,17 @@ int main()
 {
   char s1[] = "hello";
   char s2[] = "ello";
+
   squeeze(s1, s2);
   printf("%s\n", s1);
   return 0;
 }
 
-
 void squeeze(char s1[], char s2[])
 {
 
-  int i, j;
-  int  k; //maintains the index
+  int i, j; // for traversing the character arrays
+  int  k; // keeps track of the index
 
   for (i=0; s2[i] != '\0'; ++i)
     {
@@ -31,6 +31,6 @@ void squeeze(char s1[], char s2[])
         }
     }
 
-  s1[k] = '\0';
+  s1[k] = '\0'; // append null character
 }
 
