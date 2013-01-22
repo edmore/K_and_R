@@ -12,7 +12,6 @@ int htoi(char s[]);
 int main()
 {
   int i = 0;
-  int j = 0;
   int value;
   char c;
   char s[MAXLINE];
@@ -23,11 +22,10 @@ int main()
       ;
     }else{
       s[i++] = c;
-      ++j;
     }
   }
 
-  count = j;
+  count = i;
   value = htoi(s);
   printf("The hex string as an integer is %i.\n", value);
   return 0;
