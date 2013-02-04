@@ -6,7 +6,7 @@ int atoi(char s[]);
 
 int main()
 {
-  char s[3] = "412";
+  char s[] = "412";
   printf("%i\n", atoi(s));
   return 0;
 }
