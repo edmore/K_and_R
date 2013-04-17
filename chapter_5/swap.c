@@ -5,14 +5,13 @@ void swap(int *, int *);
 void swap(int *p, int *q)
 {
   int temp;
-  temp = *p; // salvage the value of int that p points to
+  temp = *p; // salvage the value of type int that p points to
   *p = *q;
   *q = temp;
 }
 
 int main(void)
 {
-
   int x, y;
   x = 1;
   y = 2;
