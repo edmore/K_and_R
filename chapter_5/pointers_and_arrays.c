@@ -3,7 +3,7 @@
 int main(void)
 {
   char name[] = "Edmore";
-  char * pa;
+  char *pa;
   // name of array is synonym for first element &a[0]
   pa = name; // pointer is a variable, array name isnt
 
