@@ -4,11 +4,10 @@ void str_cpy(char *, char *);
 
 void str_cpy(char *s, char *t)
 {
-  // no need to use '\0'
-  while (*s++ = *t++)
+  // no need to use '\0', '/0' also copied.
+  while ((*s++ = *t++))
     ;
 }
-
 
 int main(void)
 {
