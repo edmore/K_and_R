@@ -7,7 +7,6 @@ struct point {
 
 int main(void)
 {
-
   struct point pt, *pp = &pt;
   pt.x = 3;
 
